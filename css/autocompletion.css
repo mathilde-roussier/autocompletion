@@ -1,0 +1,75 @@
+html {
+    background: silver;
+    height: 100%;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background: rosybrown;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: indianred;
+    height: 70%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    outline: none;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background: indianred;
+    border-radius: 0px 0px 10px 10px;
+}
+
+header form {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+header a {
+    width: 20%;
+    text-align: center;
+}
+
+/* Barre de recherche principale */
+
+.accueil form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20%;
+    width: 80%;
+}
+
+.accueil form input[type="search"] {
+    width: 80%;
+    height: 35%;
+    border: 4px inset gray;
+    border-radius: 20px;
+}
