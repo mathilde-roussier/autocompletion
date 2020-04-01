@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 01 avr. 2020 à 07:49
+-- Généré le :  mer. 01 avr. 2020 à 15:49
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `artistes` (
   `avatar` varchar(255) NOT NULL,
   `dernier_album` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `artistes`
@@ -65,7 +65,27 @@ INSERT INTO `artistes` (`id`, `nom`, `nationalite`, `style_musicale`, `avatar`, 
 (17, 'U2', 'Irlandaise', 'Rock', 'img/U2.jpg', 'Songs of Experience'),
 (18, 'Prince', 'Americaine', 'Pop / Funk / RnB / Rock / Soul / Jazz', 'img/prince.jpg', 'Hitnrun Phase Two'),
 (19, 'Christine and the Queens', 'Francaise', 'Pop', 'img/christine_queens.jpg', 'Chris'),
-(20, 'Madonna', 'Americaine', 'Dance-pop / Electro / Jazz', 'img/madonna.jpg', 'Madame X');
+(20, 'Madonna', 'Americaine', 'Dance-pop / Electro / Jazz', 'img/madonna.jpg', 'Madame X'),
+(21, 'Johnny Hallyday', 'Francaise', 'Rock / Chanson francaise / Soul / Country', 'img/johnny_hallyday.jpg', 'Mon pays c\'est l\'amour'),
+(22, 'Angèle', 'Belge', 'Pop / Chanson francaise', 'img/angele.jpg', 'Brol la suite'),
+(23, 'Rihanna', 'Americaine / Barbadienne', 'Pop / RNB / Hip-Hop / Dance / Reggae', 'img/rihanna.jpg', 'Anti'),
+(24, 'David Guetta', 'Francaise', 'Electro / House / Dance', 'img/david_guetta.jpg', '7'),
+(25, 'Ed Sheeran', 'Anglais', 'Pop / Folk / Rock', 'img/ed_sheeran.jpg', 'I Don\'t Care'),
+(26, 'Lana Del Rey', 'Americaine', 'Pop / Rock', 'img/lana_del_rey.jpg', 'Norman Fucking Rockwell '),
+(27, 'Louane', 'Francaise', 'Variete francaise / Pop', 'img/louane.jpg', 'Louane'),
+(28, 'Francis Cabrel', 'Francaise', 'Chanson francaise / Pop / Rock / Blues', 'img/francis_cabrel.jpg', 'In extremis'),
+(29, 'The Weeknd', 'Canadienne', 'Rnb / Pop / Electro', 'img/the_weeknd.jpg', 'After Hours'),
+(30, 'Jimi Hendrix', 'Americaines', 'Rock / Blues / Hardrock  / Jazz', 'img/jimi_hendrix.jpg', 'Band of Gypsys'),
+(31, 'Matthieu Chedid', 'Francaise', 'Rock', 'img/matthieu_chedid.jpg', 'Lettre infinie'),
+(32, 'Jean Louis Aubert', 'Francaise', 'Rock / Pop', 'img/jean_louis_aubert.jpg', 'Refuge'),
+(33, 'Tryo', 'Francaise', 'Reggae / Chanson francaise', 'img/tryo.jpg', 'XXV'),
+(34, 'Therapie taxi', 'Francaise ', 'Rock / Pop / Hip-Hop', 'img/therapie_taxi.jpg', 'Cadavre exquis'),
+(35, 'Romeo Elvis', 'Belge', 'Rap / Hip-hop', 'img/romeo_elvis.jpg', 'Chocolat'),
+(36, 'Mozart', 'Autrichienne', 'Classique', 'img/mozart.jpg', 'Requiem en ré mineur'),
+(37, 'Bach', 'Allemande', 'Baroque', 'img/bach.jpg', 'Oratio de Noel'),
+(38, 'Antonio Vivaldi', 'Italienne', 'Baroque', 'img/vivaldi.jpg', 'Les quatres saisons'),
+(39, 'Beethoven', 'Autrichienne', 'Classique', 'img/beethoven.jpg', 'Fidelio'),
+(40, 'Chopin', 'Polonaise', 'Romantique', 'img/chopin.jpg', 'Sonate pour piano n°3');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
