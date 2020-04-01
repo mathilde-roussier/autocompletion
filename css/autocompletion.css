@@ -19,7 +19,7 @@ main {
     flex-direction: column;
     background: indianred;
     height: 70%;
-    width: 80%;
+    width: 50%;
     justify-content: center;
     align-items: center;
 }

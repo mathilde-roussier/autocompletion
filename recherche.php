@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src='autocompletion.js'></script>
+    <script src='js/autocompletion.js'></script>
     <link rel='stylesheet' href='css/autocompletion.css'>
     <title>Recherche</title>
 </head>

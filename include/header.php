@@ -5,6 +5,6 @@
         <input type='submit' value='Rechercher' />
     </form>
 
-    <a href='index.php'>Accueil</a>
+    <a href='index.php'><span>Accueil<span></a>
 
 </header>
