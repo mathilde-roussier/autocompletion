@@ -21,7 +21,7 @@ function bdd()
         array_push($bdd, json_encode($donnees));
     }
 
-    echo json_encode($bdd);
+    return json_encode($bdd);
 }
 
 // Requête SQL recup résultat recherche
@@ -40,15 +40,15 @@ function recherche($recherche)
     while ($donnees = $recup->fetch(PDO::FETCH_ASSOC)) {
         array_push($resultat, json_encode($donnees));
     }
-    echo json_encode($resultat);
+    return json_encode($resultat);
 }
 
 // Activation des fonctions
 
 if (isset($_GET['recherche'])) {
-    recherche($_GET['recherche']);
+    echo recherche($_GET['recherche']);
 }
 
 if (isset($_GET['recup'])) {
-    bdd();
+    echo bdd();
 }
