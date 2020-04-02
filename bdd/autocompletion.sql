@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 01 avr. 2020 à 15:49
+-- Généré le :  jeu. 02 avr. 2020 à 16:08
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `artistes` (
   `avatar` varchar(255) NOT NULL,
   `dernier_album` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `artistes`
@@ -85,7 +85,17 @@ INSERT INTO `artistes` (`id`, `nom`, `nationalite`, `style_musicale`, `avatar`, 
 (37, 'Bach', 'Allemande', 'Baroque', 'img/bach.jpg', 'Oratio de Noel'),
 (38, 'Antonio Vivaldi', 'Italienne', 'Baroque', 'img/vivaldi.jpg', 'Les quatres saisons'),
 (39, 'Beethoven', 'Autrichienne', 'Classique', 'img/beethoven.jpg', 'Fidelio'),
-(40, 'Chopin', 'Polonaise', 'Romantique', 'img/chopin.jpg', 'Sonate pour piano n°3');
+(40, 'Chopin', 'Polonaise', 'Romantique', 'img/chopin.jpg', 'Sonate pour piano n°3'),
+(41, 'Maitre Gims', 'Congolaise', 'Rap / Hip-Hop / Pop', 'img/gims.jpg', 'Ceinture Noire '),
+(42, 'Lady gaga', 'Americaine', 'Pop / Dance / Rock ', 'img/lady_gaga.jpg', 'The Chromatica Ball'),
+(43, 'Lenny Kravitz', 'Americaine', 'Pop / Rock / Soul', 'img/lenny_kravitz.jpg', 'Raise Vibration'),
+(44, 'Spice Girls', 'Anglaise', 'Pop / Rnb / Dance', 'img/spice_girls.jpg', 'Greatest Hits'),
+(45, 'Pink', 'Americaine', 'Rock / Pop / Rnb', 'img/pink.jpg', 'Hurts 2B Human'),
+(46, 'Trois cafés gourmands', 'Francaise', 'Chanson francaise', 'img/trois_cafes_gourmands.jpg', '//'),
+(47, 'Luciano Pavarotti ', 'Italienne', 'Lyrique', 'img/luciano_pavarotti.jpg', '//'),
+(48, 'Eminem', 'Americaine', 'Rap / Hip-hop', 'img/eminem.jpg', 'Music to Be Murdered By'),
+(49, 'Florent Pagny', 'Francaise', 'Chanson francaise / Pop / Rock / Lyrique', 'img/florent_pagny.jpg', 'Aime la vie'),
+(50, 'Garou', 'Canadienne', 'Chanson francaise / Blues', 'img/garou.jpg', 'Soul City');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
