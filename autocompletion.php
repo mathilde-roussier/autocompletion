@@ -1,8 +1,5 @@
 <?php
 
-$_GET['recherche'] = 'belge';
-$_GET['recup'] = '1';
-
 // Requête SQL recup base de donnée
 function bdd()
 {
@@ -45,10 +42,10 @@ function recherche($recherche)
 
 // Activation des fonctions
 
-if (isset($_GET['recherche'])) {
-    echo recherche($_GET['recherche']);
+if (isset($_GET['search'])) {
+    echo recherche($_GET['search']);
 }
 
-if (isset($_GET['recup'])) {
+if (isset($_GET['id'])) {
     echo bdd();
 }
