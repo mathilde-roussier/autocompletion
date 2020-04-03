@@ -30,7 +30,7 @@ function recherche($recherche)
         die('Erreur : ' . $e->getMessage());
     }
 
-    $recup = $con->query("SELECT nom FROM artistes WHERE CONCAT(nom,nationalite,style_musicale) LIKE '%" . $recherche . "%' ");
+    $recup = $con->query("SELECT nom;id FROM artistes WHERE CONCAT(nom,nationalite,style_musicale) LIKE '%" . $recherche . "%' ");
 
     $resultat = [];
 
