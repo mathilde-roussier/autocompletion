@@ -17,11 +17,11 @@
 
         <h1> MUSIC </h1>
         <section>
-            <form action="" id="formsearch">
-                <input type="text" id="search" autocomplete="off" placeholder="Taper un nom d'artiste"/>
+            <form action="recherche.php" id="formsearch" method="get">
+                <input type="text" id="searchmain" autocomplete="off" placeholder="Taper un nom d'artiste" name="search"/>
                 <input type="submit" id="send">
             </form>
-            <div id="result">
+            <div id="resultmain">
             </div>
         </section>
         

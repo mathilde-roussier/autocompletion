@@ -1,9 +1,13 @@
 <header>
 
-    <form action='recherche.php' method='GET'>
-        <input type='search' name='search' placeholder='Tapez votre recherche...' />
-        <input type='submit' value='Rechercher' />
-    </form>
+        <section>
+            <form action="recherche.php" id="formsearch" method="get">
+                <input type="text" id="search" autocomplete="off" placeholder="Taper un nom d'artiste" name="search"/>
+                <input type="submit" id="send">
+            </form>
+            <div id="result">
+            </div>
+        </section>
 
     <a href='index.php'><span>Accueil<span></a>
 
