@@ -7,13 +7,16 @@ $(document).ready(function () {
             datatype: "json",
             success: function (datatype) {
                 var data = JSON.parse(datatype);
-                // console.log(data);
                 var valeur = $('#search').val();
                 $('#result').empty();
                 for (j = 0; j < data.length; ++j) {
                     for (i = 0; i < Object.values(data[j]).length; ++i) {
                         if ((Object.values(data[j])[i].toLowerCase()).includes(valeur.toLowerCase()) == true) {
-                            $('#result').append('<div onclick="recupId(this)" class="liste" id="'+ Object.values(data[j])[i] +'">' + Object.values(data[j])[i] + '</div>');
+                            if($('#'+i+'').html() != Object.values(data[j])[i]){
+                                $('#result').append('<div onclick="recupId(this)" class="liste" id="'+ i +'">' + Object.values(data[j])[i] + '</div>');
+                            }else{
+                                break;
+                            }
                         }
                     }
                 }
@@ -31,13 +34,16 @@ $(document).ready(function () {
             datatype: "json",
             success: function (datatype) {
                 var data = JSON.parse(datatype);
-                // console.log(data);
                 var valeur = $('#searchmain').val();
                 $('#resultmain').empty();
                 for (j = 0; j < data.length; ++j) {
                     for (i = 0; i < Object.values(data[j]).length; ++i) {
                         if ((Object.values(data[j])[i].toLowerCase()).includes(valeur.toLowerCase()) == true) {
-                            $('#resultmain').append('<div onclick="recupIdMain(this)" class="listemain" id="'+ Object.values(data[j])[i] +'">' + Object.values(data[j])[i] + '</div>');
+                            if($('#'+i+'').html() != Object.values(data[j])[i]){
+                                $('#resultmain').append('<div onclick="recupIdMain(this)" class="listemain" id="'+ i +'">' + Object.values(data[j])[i] + '</div>');
+                            }else{
+                                break;
+                            }
                         }
                     }
                 }
@@ -49,12 +55,12 @@ $(document).ready(function () {
     })
 })
 function recupIdMain(divId){
-    id = divId.id;
+    id = divId.innerHTML;
     $('#searchmain').val(id);
     $('.listemain').remove();
 }
 function recupId(divId){
-    id = divId.id;
+    id = divId.innerHTML;
     $('#search').val(id);
     $('.liste').remove();
 }
