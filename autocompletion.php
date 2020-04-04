@@ -1,8 +1,5 @@
 <?php
 
-$_GET['recherche'] = 'belge';
-$_GET['recup'] = '1';
-
 // Requête SQL recup base de donnée
 function bdd()
 {
@@ -33,7 +30,7 @@ function recherche($recherche)
         die('Erreur : ' . $e->getMessage());
     }
 
-    $recup = $con->query("SELECT nom FROM artistes WHERE CONCAT(nom,nationalite,style_musicale) LIKE '%" . $recherche . "%' ");
+    $recup = $con->query("SELECT nom;id FROM artistes WHERE CONCAT(nom,nationalite,style_musicale) LIKE '%" . $recherche . "%' ");
 
     $resultat = [];
 
@@ -45,10 +42,10 @@ function recherche($recherche)
 
 // Activation des fonctions
 
-if (isset($_GET['recherche'])) {
-    echo recherche($_GET['recherche']);
+if (isset($_GET['search'])) {
+    echo recherche($_GET['search']);
 }
 
-if (isset($_GET['recup'])) {
+if (isset($_GET['id'])) {
     echo bdd();
 }

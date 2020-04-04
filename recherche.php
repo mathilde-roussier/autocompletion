@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src='https://code.jquery.com/jquery-3.4.1.js'></script>
     <script src='js/autocompletion.js'></script>
     <link rel='stylesheet' href='css/autocompletion.css'>
     <title>Recherche</title>

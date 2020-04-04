@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src='https://code.jquery.com/jquery-3.4.1.js'></script>
     <script src='js/autocompletion.js'></script>
     <link rel='stylesheet' href='css/autocompletion.css'>
     <title>Accueil</title>
@@ -15,11 +16,15 @@
     <main class='accueil'>
 
         <h1> MUSIC </h1>
-
-        <form action='recherche.php' method='GET'>
-            <input type='search' name='search' placeholder='Tapez votre recherche...' />
-            <input type='submit' value='Rechercher' />
-        </form>
+        <section>
+            <form action="recherche.php" id="formsearch" method="get">
+                <input type="text" id="searchmain" autocomplete="off" placeholder="Taper un nom d'artiste" name="search"/>
+                <input type="submit" id="send">
+            </form>
+            <div id="resultmain">
+            </div>
+        </section>
+        
 
     </main>
 
