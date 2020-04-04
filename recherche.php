@@ -1,3 +1,6 @@
+<?php include "autocompletion.php";
+$affichage = new affichage; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,7 +16,9 @@
 
     <?php include('include/header.php') ?>
 
-    <main>
+    <main class='resultat_recherche'>
+
+    <?php $affichage->resultat_recherche($_GET['search']); ?>
 
     </main>
 

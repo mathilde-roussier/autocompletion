@@ -1,51 +1,54 @@
 <?php
 
-// Requête SQL recup base de donnée
-function bdd()
+class affichage
 {
-    try {
-        $con = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '');
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
+
+    private $con;
+
+    public function __construct()
+    {
+        try {
+            $this->con = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '');
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
+        }
     }
 
-    $recup = $con->query("SELECT * from artistes");
+    public function resultat_recherche($recherche)
+    {
 
-    $bdd = [];
+        $recup = $this->con->query("SELECT nom,id FROM artistes WHERE CONCAT(nom,nationalite,style_musicale,dernier_album) LIKE '%$recherche%'");
+        $resultat = $recup->fetchAll(PDO::FETCH_ASSOC);
 
-    while ($donnees = $recup->fetch(PDO::FETCH_ASSOC)) {
+        if (!empty($resultat)) { ?>
+            <section>
+                <?php foreach ($resultat as $infos) {
+                ?>
+                    <div>
+                        <p><a href='element.php?id=<?php echo $infos['id']; ?>'><?php echo $infos['nom']; ?></a></p>
+                    </div>
+                <?php } ?>
+            </section>
 
-        array_push($bdd, json_encode($donnees));
+        <?php }
     }
 
-    return json_encode($bdd);
-}
+    public function element($id)
+    {
+        $recup = $this->con->query("SELECT * FROM artistes WHERE id='$id'");
+        $resultat = $recup->fetch(PDO::FETCH_ASSOC);
 
-// Requête SQL recup résultat recherche
-function recherche($recherche)
-{
-    try {
-        $con = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '');
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
+        if (!empty($resultat)) {
+        ?>
+            <section>
+                <img src='<?php echo $resultat['avatar']; ?>'>
+                <div>
+                    <p><span> Nom </span>: <?php echo $resultat['nom']; ?></p>
+                    <p><span> Nationalité </span>: <?php echo $resultat['nationalite']; ?></p>
+                    <p><span> Style(s) musical(aux) </span>: <?php echo $resultat['style_musicale']; ?></p>
+                    <p><span> Dernier album </span>: <?php echo $resultat['dernier_album']; ?></p>
+                </div>
+            </section>
+<?php }
     }
-
-    $recup = $con->query("SELECT nom;id FROM artistes WHERE CONCAT(nom,nationalite,style_musicale) LIKE '%" . $recherche . "%' ");
-
-    $resultat = [];
-
-    while ($donnees = $recup->fetch(PDO::FETCH_ASSOC)) {
-        array_push($resultat, json_encode($donnees));
-    }
-    return json_encode($resultat);
-}
-
-// Activation des fonctions
-
-if (isset($_GET['search'])) {
-    echo recherche($_GET['search']);
-}
-
-if (isset($_GET['id'])) {
-    echo bdd();
 }

@@ -15,10 +15,10 @@
 
     <main class='accueil'>
 
-        <h1> MUSIC </h1>
+        <h1> -- MUSIQUE -- </h1>
         <section>
             <form action="recherche.php" id="formsearch" method="get">
-                <input type="text" id="searchmain" autocomplete="off" placeholder="Taper un nom d'artiste" name="search"/>
+                <input type="text" id="searchmain" autocomplete="off" placeholder="Taper votre recherche" name="search"/>
                 <input type="submit" id="send">
             </form>
             <div id="resultmain">
