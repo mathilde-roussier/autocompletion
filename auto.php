@@ -1,6 +1,6 @@
 <?php
 
-$search = $_GET['search'];
+$search = htmlspecialchars($_GET['search']);
 
 try {
     $con = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '');

@@ -19,7 +19,7 @@ $affichage = new affichage; ?>
 
     <main class='element'>
 
-        <?php $affichage->element($_GET['id']); ?>
+        <?php $affichage->element(htmlspecialchars($_GET['id'])); ?>
 
     </main>
 

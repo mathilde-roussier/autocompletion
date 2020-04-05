@@ -30,6 +30,12 @@ class affichage
                 <?php } ?>
             </section>
 
+        <?php } else { ?>
+            <section>
+                <div>
+                    <p> Aucun résultats </p>
+                </div>
+            </section>
         <?php }
     }
 

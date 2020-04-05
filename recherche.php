@@ -1,4 +1,10 @@
-<?php include "autocompletion.php";
+<?php
+
+if ($_GET['search'] == '') {
+    header('Location: index.php');
+}
+
+include "autocompletion.php";
 $affichage = new affichage; ?>
 
 <!DOCTYPE html>
@@ -19,7 +25,7 @@ $affichage = new affichage; ?>
 
     <main class='resultat_recherche'>
 
-    <?php $affichage->resultat_recherche($_GET['search']); ?>
+        <?php $affichage->resultat_recherche(htmlspecialchars($_GET['search'])); ?>
 
     </main>
 
