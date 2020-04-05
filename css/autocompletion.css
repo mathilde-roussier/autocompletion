@@ -197,6 +197,16 @@ header form input[type="text"] {
     border-radius: 20px;
 }
 
+.resultat_recherche div:hover {
+    background: rgba(112, 47, 22,0.603);
+    backdrop-filter: blur(5px);
+}
+
+.resultat_recherche div:hover a{
+    color:black;
+}
+
+
 .resultat_recherche div a {
     letter-spacing: 2px;
     font-weight: bold;
